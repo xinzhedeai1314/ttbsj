@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>管理员信息管理</title>
+		<script type="text/javascript" src="../lib/js/includeHeadBackend.js"></script>
+		<script type="text/javascript" src="admin.js"></script>
+	</head>
+	<body>
+		<header class="container">
+			<form id="searchForm">
+				<div class="searchBtn">
+					<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-search">查询</span></button>
+					<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-refresh">清空</span></button>
+				</div>
+				<table class="table table-bordered">
+					<col width="120" />
+					<col width="250" />
+					<col width="120" />
+					<col width="250" />
+					<col width="120" />
+					<col width="250" />
+					<!--<col width="120" />
+						<col width="480" />-->
+					<tbody>
+						<tr>
+							<td>管理员名称:</td>
+							<td><input type="text" class="form-control" name="user_name" /></td>
+						<!-- 	<td class="i18n" name="comName_en">公司名称(EN):</td>
+							<td><input type="text" class="form-control" name="company_nm_en" /></td>
+							<td class="i18n" name="comName_jp">公司名称(JP):</td>
+							<td><input type="text" class="form-control" name="company_nm_jp" /></td> -->
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</header>
+		<article class="container">
+			<div class="operateBtn">
+				<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus">增加</span></button>
+				<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove">删除</span></button>
+			</div>
+			<table id="adminDatagrid"></table>
+		</article>
+		<footer>哈利路亚！yimaneili O(∩_∩)O哈哈~</footer>
+	</body>
+</html>

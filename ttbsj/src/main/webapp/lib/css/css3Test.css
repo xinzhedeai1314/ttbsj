@@ -1,0 +1,111 @@
+/*------------------------------------*\
+    #seek 找Ta模块 动画
+\*------------------------------------*/
+
+/**
+ * 波纹背景
+ */
+.seek .ripples{ position:relative; }
+.seek .ripple{
+	position:absolute;
+ 	margin:74px 0 0 -9px;
+ 	background:#fff;
+ 	-webkit-border-radius:500px;
+       -moz-border-radius:500px;
+            border-radius:500px;
+}
+.so-w1330 .seek .ripple{ margin-left: 77px; }
+.tt--left .seek .ripple{ margin-left: 143px; }
+.seek .ripple-1{
+	-webkit-animation:ripple 5s linear infinite;
+	   -moz-animation:ripple 5s linear infinite;
+	    -ms-animation:ripple 5s linear infinite;
+	     -o-animation:ripple 5s linear infinite;
+	        animation:ripple 5s linear infinite;
+}
+.seek .ripple-2{
+	-webkit-animation:ripple 5s linear infinite 1.2s;
+	   -moz-animation:ripple 5s linear infinite 1.2s;
+	    -ms-animation:ripple 5s linear infinite 1.2s;
+	     -o-animation:ripple 5s linear infinite 1.2s;
+	        animation:ripple 5s linear infinite 1.2s;
+}
+.seek .ripple-3{
+	-webkit-animation:ripple 5s linear infinite 2.4s;
+	   -moz-animation:ripple 5s linear infinite 2.4s;
+	    -ms-animation:ripple 5s linear infinite 2.4s;
+	     -o-animation:ripple 5s linear infinite 2.4s;
+	        animation:ripple 5s linear infinite 2.4s;
+}
+.seek .ripple-4{
+	-webkit-animation:ripple 5s linear infinite 3.6s;
+	   -moz-animation:ripple 5s linear infinite 3.6s;
+	    -ms-animation:ripple 5s linear infinite 3.6s;
+	     -o-animation:ripple 5s linear infinite 3.6s;
+	        animation:ripple 5s linear infinite 3.6s;
+}
+
+@-webkit-keyframes ripple{
+  from {
+  	width: 255px;
+  	height: 255px;
+    	background: #e1e1e1;
+      -webkit-transform: scale(0);
+      opacity: 1;
+    }
+    to {
+  	width: 255px;
+  	height: 255px;
+    	background: #e1e1e1;
+      -webkit-transform: scale(2);
+      opacity: 0;
+    }
+  }
+@-moz-keyframes ripple{
+  from {
+  	width: 255px;
+  	height: 255px;
+    	background: #e1e1e1;
+      -moz-transform: scale(0);
+      opacity: 1;
+    }
+    to {
+  	width: 255px;
+  	height: 255px;
+    	background: #e1e1e1;
+      -moz-transform: scale(2);
+      opacity: 0;
+    }
+  }
+@-o-keyframes ripple{
+  from {
+  	width: 255px;
+  	height: 255px;
+    	background: #e1e1e1;
+      -o-transform: scale(0);
+      opacity: 1;
+    }
+    to {
+  	width: 255px;
+  	height: 255px;
+    	background: #e1e1e1;
+      -o-transform: scale(2);
+      opacity: 0;
+    }
+  }
+@keyframes ripple{
+    from {
+		width: 255px;
+		height: 255px;
+		background: #e1e1e1;
+		transform: scale(0);
+		opacity: 1;
+	}
+    to {
+    	width: 255px;
+    	height: 255px;
+    	background: #e1e1e1;
+    	transform: scale(2);
+    	opacity: 0;
+    }
+}

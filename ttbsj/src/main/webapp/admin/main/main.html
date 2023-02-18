@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>uimaker信息管理系统</title>
+<link rel="stylesheet" type="text/css" href="../lib/css/base.css">
+<link rel="stylesheet" type="text/css" href="../lib/css/platform-blue.css">
+<link rel="stylesheet" type="text/css" href="../lib/plugin/custom/uimaker/icon.css">
+<link rel="stylesheet" type="text/css" href="../lib/plugin/custom/uimaker/easyui.css" />
+<link rel="stylesheet" style="text/css" href="../../lib/plugin/bootstrap/css/font-awesome.css"></link>
+</head>
+<body>
+	<div class="container">
+		<div id="pf-hd">
+			<div class="pf-logo">
+				<!-- <img src="../lib/img/images/main/main_logo.png" alt="logo"> -->
+				<h2>ADMIN system</h2>
+			</div>
+			<div class="pf-nav-wrap"><!-- 顶部栏功能图标 -->
+				<div class="pf-nav-ww">
+					<ul class="pf-nav">
+						<li class="pf-nav-item home current" data-menu="sys-manage">
+							<a href="javascript:;"> <span class="iconfont">&#xe63f;</span>
+								<span class="pf-nav-title">系统管理</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<a href="javascript:;" class="pf-nav-prev disabled iconfont">&#xe606;</a>
+				<a href="javascript:;" class="pf-nav-next iconfont">&#xe607;</a>
+			</div>
+			<div class="pf-user"><!-- 用户昵称部分 -->
+				<div class="pf-user-photo">
+					<img src="../lib/img/images/main/user.png" alt="">
+				</div>
+				<h4 class="pf-user-name ellipsis">uimaker</h4>
+				<i class="iconfont xiala">&#xe607;</i>
+				<div class="pf-user-panel"><!-- 用户下拉列表项 -->
+					<ul class="pf-user-opt">
+						<li>
+							<a href="javascript:;"> 
+								<i class="fa fa-user fa-lg"></i><span class="pf-opt-name">用户信息</span>
+							</a>
+						</li>
+						<li class="pf-modify-pwd">
+							<a href="http://www.uimaker.com">
+								<i class="fa fa-lock fa-lg"></i> <span class="pf-opt-name">修改密码</span>
+							</a>
+						</li>
+						<li id="logout">
+							<a>
+								<i class="fa fa-power-off fa-lg"></i> <span class="pf-opt-name">退出</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="pf-bd">
+			<div id="pf-sider">
+				<h2 class="pf-model-name">
+					<span class="iconfont">&#xe64a;</span> <span class="pf-name">组织管理</span>
+					<span class="toggle-icon"></span>
+				</h2>
+				<ul class="sider-nav"></ul>
+			</div>
+			<div id="pf-page">
+				<div class="easyui-tabs1" style="width: 100%; height: 100%;" id="index_tabs">
+					<div title="首页" style="padding: 10px 5px 5px 10px;">
+						<iframe class="page-iframe" src="../manage/admin.html" frameborder="no" border="no" height="100%" width="100%" scrolling="auto"></iframe>
+					</div>
+				</div>
+			</div>
+			<div id="pf-ft">
+				<div class="system-name">
+					<i class="iconfont">&#xe6fe;</i> <span>信息管理系统&nbsp;v1.0</span>
+				</div>
+				<div class="copyright-name">
+					<span>CopyRight&nbsp;2016&nbsp;&nbsp;uimaker.com&nbsp;版权所有</span> <i
+						class="iconfont">&#xe6ff;</i>
+				</div>
+			</div>
+		</div>
+		<div id="index_tabsMenu" style="width: 120px; display: none;">
+			<div title="refresh" data-options="iconCls:'transmit'">刷新</div>
+			<div class="menu-sep"></div>
+			<div title="close" data-options="iconCls:'delete'">关闭</div>
+			<div title="closeOther" data-options="iconCls:'delete'">关闭其他</div>
+			<div title="closeAll" data-options="iconCls:'delete'">关闭所有</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../lib/plugin/custom/jquery.min.js"></script>
+	<script type="text/javascript" src="../lib/plugin/custom/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

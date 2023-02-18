@@ -1,0 +1,17 @@
+/* body{padding:10px !important;}
+.dateTd{width: 500px; min-width: 350px;}
+.dateTd > input {width:initial; display: inline-block;}
+.searchForm th{vertical-align: middle !important;}
+.funcButton{float: right;height: 37px;}
+.clearFloat{clear: both;} */
+@import url('overide.css');
+.searchBtn, .operateBtn {text-align: right; margin-bottom: 10px;}
+/*修改按钮中字体图标的样式*/
+.searchBtn .glyphicon:before, .operateBtn .glyphicon:before{padding-right: 6px;}
+	
+#searchForm > table > tbody > tr > td:nth-child(2n+1){font-weight:bold; vertical-align: middle; text-align:right;}
+body{padding-top:12px;}
+/*回到顶部css样式*/
+.goTop, .goTop:hover {display: block; width: 54px; height: 54px; position:absolute; right:14px; cursor:pointer;}
+.goTop{background: rgba(0, 0, 0, 0) url("../img/backtop.jpg") no-repeat scroll left top; display:none;}
+.goTop:hover{background:rgba(0, 0, 0, 0) url("../img/backtop1.jpg") repeat-x scroll left top;}

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="customMapper.CustomScriptureMapper">
+	<insert id="insertScripture" parameterType="Map">
+		replace into scripture
+		(
+		<!-- id, -->
+		scripture_no,
+		scripture_text,
+		url,
+		create_date,
+		type
+		)
+		values
+		(
+		<!-- UUID(), -->
+		#{scripture_no},
+		#{scripture_text},
+		#{url},
+		#{create_date},
+		#{type}
+		)
+	</insert>
+		<insert id="insertScriptureByManual" parameterType="Map">
+		insert into scripture
+		(
+		scripture_no,
+		scripture_text,
+		url,
+		create_date,
+		type
+		)
+		values
+		(
+		<!-- UUID(), -->
+		#{scriptureNo},
+		#{scriptureText},
+		#{url},
+		#{createDate},
+		#{scriptureNoFlag}
+		)
+	</insert>
+
+	
+	<select id="searchScriptures" parameterType="Map" resultType="Map">
+		SELECT 
+			*
+		 FROM
+		scripture
+		<where>
+			<if test="readSriptureNoList != null and readSriptureNoList != ''">
+				scripture_no IN
+				<foreach collection="readSriptureNoList" item="item" index="index"
+					open="(" close=")" separator=",">
+					#{item}
+				</foreach>
+			</if>
+		</where>
+			ORDER BY create_date DESC
+	</select>
+	<select id="searchScripturesByDate" parameterType="Map" resultType="Integer">
+		SELECT  
+			substring(scripture_no, 2) AS scripture_no<!-- 从第二个字符开始裁剪包含第二个 --> 
+		FROM
+		scripture
+		<where>
+			<if test="type != null and type != ''">
+				type = #{type}
+			</if>
+			<if test="createDate != null and createDate != ''">
+				AND create_date = #{createDate}
+			</if>
+		</where>
+	</select>
+	<select id="selectLastDate" parameterType="Map" resultType="String">
+			SELECT 
+				create_date
+			FROM
+				scripture
+			WHERE 
+				type = #{scriptureNoFlag}
+			ORDER BY create_date DESC LIMIT 0, 1
+	</select>
+	<select id="getPrevScripture" parameterType="Map" resultType="Map">
+			SELECT 
+				*
+			FROM
+				scripture
+			WHERE 
+				type = #{type}
+			ORDER BY create_date DESC LIMIT 0, 1
+	</select>
+	<select id="selectLastScriptureNo" parameterType="Map" resultType="Integer">
+		SELECT
+			substring(scripture_no, 2) + 0 AS scripturenNo
+		FROM scripture
+		WHERE
+			type=#{scriptureNoFlag}
+		ORDER BY scripturenNo DESC LIMIT 0, 1
+	</select>
+	
+	<update id="modScripture" parameterType="Map">
+		 update scripture
+    <set >
+      <if test="scripture_text != null and scripture_text != ''" >
+        scripture_text = #{scripture_text},
+      </if>
+      <if test="url != null and url != ''" >
+        url = #{url},
+      </if>
+    </set>
+    <where>
+    	scripture_no = #{scripture_no}
+    </where> 
+	</update>
+	
+	<select id="getNextScriptureDate" parameterType="Map" resultType="Map">
+		SELECT 
+			SUBSTRING(scripture_no, 2) + 0 AS scriptureNo,
+			create_date AS last_create_date
+		FROM
+			scripture
+		<where>
+			<if test="type != null and type != ''">
+				type = #{type}
+			</if>
+		</where>
+		ORDER BY scriptureNo DESC LIMIT 0, 1
+	</select>
+	
+	<select id="getScriptureByBible" parameterType="Map" resultType="Map">
+			SELECT
+				a.volume_id,
+				a.chapter_no,
+				a.verse_no,
+				a.lection,
+				b.volume_name
+			FROM 
+				scriptures a
+			LEFT JOIN 
+				volumes b
+			ON b.volume_id = a.volume_id
+		<where>
+			<if test="volume_id != null and volume_id != ''">
+				a.volume_id = #{volume_id}
+			</if>
+			<if test="chapter_no != null and chapter_no != ''">
+				and a.chapter_no = #{chapter_no}
+			</if>
+			<if test="verse_no_from != null and verse_no_from != ''">
+				and a.verse_no <![CDATA[>=]]> #{verse_no_from}
+			</if>
+			<if test="verse_no_to != null and verse_no_to != ''">
+				and a.verse_no <![CDATA[<=]]> #{verse_no_to}
+			</if>
+		</where>
+	</select>
+	<!-- 获取经文中卷 章 节等信息 -->
+	<select id="getVolumeChapterVerse" parameterType="Map" resultType="Map">
+			<!-- 获取经文卷 -->
+   			<if test="type != null and type != '' and type == 'volume'">
+   			   SELECT
+					a.volume_id,
+					b.volume_name
+				FROM 
+					scriptures a
+				LEFT JOIN 
+					volumes b
+				ON b.volume_id = a.volume_id
+				GROUP BY a.volume_id		
+   			</if>
+   			<!-- 获取经文章 -->
+   			<if test="type != null and type != '' and type == 'chapter' and volume_id !=null and volume_id != ''">
+   			    SELECT
+					a.chapter_no
+				FROM 
+					scriptures a
+				where 
+					a.volume_id = #{volume_id}
+				GROUP BY a.chapter_no	
+   			</if>
+   			<!-- 获取经文节（起始） -->
+   			<if test="type != null and type != '' and type == 'verse_from'">
+   				 SELECT
+					a.verse_no AS verse_no_from
+				FROM 
+					scriptures a
+				where 
+					a.volume_id = #{volume_id} and a.chapter_no = #{chapter_no}	 			
+   			</if>  
+   			<!-- 获取经文节（结束） -->
+   			<if test="type != null and type != '' and type == 'verse_to'">
+   				 SELECT
+					a.verse_no AS verse_no_to
+				FROM 
+					scriptures a
+				where 
+						a.volume_id = #{volume_id} 
+					and 
+						a.chapter_no = #{chapter_no}
+					and 
+						a.verse_no > #{verse_no_from}
+   			</if>  
+   			<!-- 根据结束节获取起始节） -->
+   			<if test="type != null and type != '' and type == 'verse_from_by_to'">
+   				 SELECT
+					a.verse_no AS verse_no_from
+				FROM 
+					scriptures a
+				where 
+						a.volume_id = #{volume_id} 
+					and 
+						a.chapter_no = #{chapter_no}
+					and 
+						a.verse_no <![CDATA[<]]> #{verse_no_to}
+   			</if> 
+    </select>
+</mapper>

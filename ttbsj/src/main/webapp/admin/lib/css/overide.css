@@ -1,0 +1,13 @@
+/****************重写bootstrap框架样式**************/
+.container{width: 100%;}
+
+/***************重写easyui框架样式**************/
+
+/*combobox下拉选项的样式*/
+.textbox, .textbox-text{width:auto !important;}
+.textbox, .textbox-text, .textbox-icon{height:35px !important;}
+.textbox-text{line-height:35px !important;}
+
+/*combobox下拉选项的样式*/
+.combobox-item-hover {background-color: #e8e8e8;color: #000000; cursor:pointer; font-size:14px; font-weight:bold; padding-left:6px; transition: all .2s linear;}
+.combobox-item-selected {background-color: #3b72b4;color: #fff;}

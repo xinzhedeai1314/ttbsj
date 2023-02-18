@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>青橄榄-首页</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="author" content="zjb" />
+<script type="text/javascript"
+	src="../lib/js/includeHead.js"></script>
+<link rel="stylesheet" type="text/css" href="../admin/lib/plugin/custom/uimaker/easyui.css" />
+<!-- <link rel="stylesheet" type="text/css" href="../lib/css/extend-easyUI.css" /> -->
+<script type="text/javascript" src="../admin/lib/plugin/custom/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../js/review.js"></script>
+<style>
+body{background-color: rgb(204, 232, 207);}
+/* body{background: #528036 url(/lib/img/background.jpg) no-repeat fixed 0 0} */
+.row{width: 70%; margin: 0 auto;}
+.switch {float: none;}
+.alert-warning{text-align:center;font-weight: bold;font-size:28px;}
+
+/* 复制提示 */
+.copy-tips{position:fixed;z-index:999;bottom:50%;left:50%;margin:0 0 -20px -80px;background-color:rgba(0, 0, 0, 0.2);filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#30000000, endColorstr=#30000000);padding:6px;}
+.copy-tips-wrap{padding:10px 20px;text-align:center;border:1px solid #F4D9A6;background-color:#FFFDEE;font-size:14px;}
+
+#previewArea{min-height: 300px;}
+
+#volume_id{width:200px;}
+.inline-input > label{margin-right:10px;}
+.inline-input > input{display:inline-block; margin-right:20px; width:55px;}
+
+/*combobox下拉选项的样式*/
+/* .textbox, .textbox-text{width:auto !important;} */
+.textbox, .textbox-text, .textbox-icon{height:35px !important;}
+.textbox-text{line-height:35px !important;}
+
+/*combobox下拉选项的样式*/
+.combobox-item-hover {background-color: #e8e8e8;color: #000000; cursor:pointer; font-size:14px; font-weight:bold; padding-left:6px; transition: all .2s linear;}
+.combobox-item-selected {background-color: #3b72b4;color: #fff;}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<form class="form-horizontal" id="seachForm">
+					<fieldset>
+						<div id="legend" class="">
+							<legend class="">周末复习经文检索</legend>
+						</div>
+						<div class="form-group volume">
+							
+						</div>
+						<div class="form-group inline-input">
+							<label for="logTitle">卷</label>
+							<input id="volume_id" name="volume_id" class="form-control" type="text">
+							<label for="logTitle">章</label>
+							<input id="chapter_no" name="chapter_no" class="form-control" type="text">
+							<label for="logTitle">节</label>
+							<input id="verse_no_from" name="verse_no_from" class="form-control" type="text">
+								<strong>~</strong>
+							<input id="verse_no_to" name="verse_no_to" class="form-control" type="text">
+						</div>
+						<div class="login-button">
+							<button type="button"
+								class="btn btn-success btn-sm index-send-btn " id="searchBtn">
+								<span class="glyphicon glyphicon-search"></span>
+								经文搜索
+							</button>
+							<button type="button"
+								class="btn btn-primary btn-sm index-send-btn " id="copy">
+								<span class="glyphicon glyphicon-hand-up"></span>
+								一键复制
+							</button>
+						</div>
+					</fieldset>
+				</form>
+				<div id="previewArea" class="clearfix">
+					<div class="alert alert-danger"> <strong>很抱歉~!！</strong>暂未找到符合查找条件的经文内容(┳＿┳)...</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="footer"></div> -->
+</body>
+</html>

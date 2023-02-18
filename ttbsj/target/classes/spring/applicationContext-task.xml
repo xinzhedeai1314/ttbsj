@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  
+	http://www.springframework.org/schema/task  
+	http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+	
+<!--   	<task:annotation-driven scheduler="qbScheduler" mode="proxy"/>  
+     <task:scheduler id="qbScheduler" pool-size="10"/> -->
+	<!--<task:scheduled-tasks scheduler="qbScheduler">
+        每天凌晨2点清除无用文件
+        <task:scheduled ref="everyDayJob" method="runTask" cron="0 0 2 * * ?" />
+        每天凌晨2点半开始更新物流信息
+        <task:scheduled ref="updateLogistics" method="runTask" cron="0 30 2 * * ?" />
+    </task:scheduled-tasks>  
+     
+    <bean id="everyDayJob" class="com.nssoft.task.EveryDayJob">
+		<constructor-arg value="true"/>
+	</bean>
+	<bean id="updateLogistics" class="com.nssoft.task.UpdateLogistics">
+		<constructor-arg value="true"/>
+	</bean> -->
+	
+	<!-- <task:scheduler id="qbScheduler" pool-size="10"/>
+	<task:scheduled-tasks>
+		<task:scheduled ref="deleteNoUseImage" method="runTask" cron="0 30 2 * * ?"/>
+	</task:scheduled-tasks>
+	<bean id="deleteNoUseImage" class="com.nssoft.task.DeleteNoUseImage">
+		<constructor-arg value="true"/>
+	</bean> -->
+	
+</beans>
+<!-- 字段   允许值   允许的特殊字符
+	秒    0-59    , - * /
+	分    0-59    , - * /
+	小时    0-23    , - * /
+	日期    1-31    , - * ? / L W C
+	月份    1-12 或者 JAN-DEC    , - * /
+	星期    1-7 或者 SUN-SAT    , - * ? / L C #
+	年（可选）    留空, 1970-2099    , - * / 
+	- 区间  
+	* 通配符  
+	? 你不想设置那个字段
+	下面只例出几个式子
+	 
+	CRON表达式    含义 
+	"0 0 12 * * ?"    每天中午十二点触发 
+	"0 15 10 ? * *"    每天早上10：15触发 
+	"0 15 10 * * ?"    每天早上10：15触发 
+	"0 15 10 * * ? *"    每天早上10：15触发 
+	"0 15 10 * * ? 2005"    2005年的每天早上10：15触发 
+	"0 * 14 * * ?"    每天从下午2点开始到2点59分每分钟一次触发 
+	"0 0/5 14 * * ?"    每天从下午2点开始到2：55分结束每5分钟一次触发 
+	"0 0/5 14,18 * * ?"    每天的下午2点至2：55和6点至6点55分两个时间段内每5分钟一次触发 
+	"0 0-5 14 * * ?"    每天14:00至14:05每分钟一次触发 
+	"0 10,44 14 ? 3 WED"    三月的每周三的14：10和14：44触发 
+	"0 15 10 ? * MON-FRI"    每个周一、周二、周三、周四、周五的10：15触发  -->

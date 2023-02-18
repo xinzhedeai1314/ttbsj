@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="task">
+	<!-- <cache type="org.mybatis.caches.ehcache.LoggingEhcache"></cache> -->
+	<select id="getUnusedFiles" resultType="Map">
+		SELECT *
+		FROM FILE_INFO
+		WHERE used_yn = 'N'
+	</select>
+</mapper>

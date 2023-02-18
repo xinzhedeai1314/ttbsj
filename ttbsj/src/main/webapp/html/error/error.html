@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Clearance System</title>
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta name="author" content="Double" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script type="text/javascript">  
+        var i = 3;  
+        var intervalid;  
+        intervalid = setInterval("fun()", 1000);  
+        function fun() {  
+            if (i == 0) {  
+                window.location.href = "index.html";   
+                clearInterval(intervalid);  
+            }  
+            document.getElementById("autoForward").innerHTML = '<span class="millisec">' + i +'</span>秒后为您自动跳转到首页';  
+            i--;   
+        }  
+</script>   
+<style type="text/css">
+	body {
+		text-align: center;
+		background-color: #f9f9f9;
+	}
+	div {
+		width: 500px;
+		height: 450px; 
+		margin: 0 auto; 
+		background: url(/lib/img/pic_error_500.png) no-repeat center;
+	}
+	p {
+		color: #bc8b6a;
+		margin: 0;
+		font-size: 100px;
+	}
+	.millisec{color: #7a2828;font-size: 30px;font-weight: bold;margin-right: 5px;}
+</style>
+</head>
+<body>
+	<div>
+		<p style="padding-top: 380px; color: #79211f;"><b>500</b></p>
+		<p style="font-size: 40px; margin-top: -15px;"><b>服务器错误</b></p>
+		<p style="font-size: 20px; padding-left: 5px;" id="autoForward"></p>
+	</div>
+</body>
+</html>

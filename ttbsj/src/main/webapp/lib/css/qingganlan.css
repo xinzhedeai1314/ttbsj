@@ -1,0 +1,464 @@
+ul,
+li,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+
+p{padding: 0;margin: 0;list-style-type: none;}
+textarea{resize:none;}
+body{overflow-x:hidden;}
+/* 公用css */
+/*dateTimepicker日历星期一的样式宽度修改*/
+/*.datetimepicker th.switch{width: 75px !important;}*/
+a:hover{color: #31708F;margin-top: 1px;cursor: pointer}
+/* .btn:hover {padding-top: 1px;} */
+.common-function{margin: 140px;}
+.common-function>ul>li{float: left;margin-left: 15px;}
+.common-function>ul>li i{margin-right: 5px;}
+/* 重置模态框的z-index：使百度编辑器的表情弹窗正常使用。 */
+.modal-backdrop{z-index:300;}
+.modal{z-index:350;}
+/* imail项目按钮效果。 */
+.btnPrimary:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0f0f0), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #f0f0f0 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #f0f0f0 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #f0f0f0 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #f0f0f0 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #f0f0f0 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#ffffff',GradientType=0);
+	background-color:#f0f0f0;
+	top:-1px;
+}
+.bg1{background-color: #f7f7f7;}
+.bg2{background-image: url(../img/qqzone.jpg);background-repeat: no-repeat;width: 100%;height: 100%;background-size:cover;/* opacity:0.8; */}
+.bg3{background-image: url(../img/qqzone1.jpg);background-repeat: no-repeat;}
+.bg4{background-color: #82D501;}
+i:hover,.glyphicon:hover{cursor: pointer}
+i{color: rgb(142, 151, 200);}
+.textoverflow,
+.ellipsis{/*display: inline-block; */white-space: nowrap;word-wrap: normal;overflow: hidden;text-overflow: ellipsis;/*max-width: 100%;width: 100%; */}
+.header i{color:#337ab7;margin-right: 5px;}
+/* easyui表格的行高 */
+/* #wrapper {width:100%; float:left; margin:0 20px 0 0;} */
+/* .datagrid-row{height: 35px;} */
+.datagrid-htable tr{height: 35px;}
+.datagrid-btable tr{height: 35px;}
+/* foot样式 */
+.foot{width: 100%;height: 100px;overflow: hidden;margin-top: 20px;}
+.fl{width: 1170px;height: 85px;border-top: solid 1px #D9D9D9;}
+.fc{margin-top: 3%;margin-left: 30%;}
+.fc ul{width: 800px;height: 40px;list-style: none;}
+.fc ul li{line-height: 18px;float: left;margin-left: 20px;}
+/* foot--end-- */
+/* 顶部标题框的样式 */
+.sch{width: 466px;float: left;margin-top: -5px;}
+/* login页面表单布局 */
+.bg{background-color: #A5D5C2;}
+.loginForm{color: #fff;width: 800px;margin-left: 68%;margin-top: 20%;}
+.loginForm>ul>li{height: 64px;}
+.loginForm>ul label{margin-top: 10px;margin-right: -8%;}
+.loginBtn{margin-left: 30px;width: 100px;}
+.loginBtnAll{margin-left: 15%;}
+/*register表单布局*/
+.bg{background-color: #A5D5C2;}
+.registerForm{width: 800px;margin-left: 19%;
+/*margin-top: 20%;*/}
+.registerForm ul li{height: 64px;}
+.registerForm ul label{margin-top: 10px;margin-right: -8%;}
+.registerForm ul select{} .regBtn{margin: 8% 19%;width: 153px;}
+.regBtnAll{margin-left: 15%;}
+.registerInfo,
+.registerMyBelief,
+.personalDetail,
+.myContactWay{/* background-color: pink; */margin-top: 20px;box-shadow: 2px 2px 5px #888888;}
+.register-textarea{width: 408px;margin-left: 19%;height: 140px !important;}
+.regTextArea{height: auto !important;}
+.title{font-size: 20px;}
+/* .registerSex{width: 360px;}
+.registerSex>input{margin-left: 18px;margin-top: 14px;} */
+.registerSex>input:first-child{/* margin-left: 42%; */}
+/* bootstrap v3.0.0这里不用设置margin-left就可以 当前版本3.3.5*/
+.labelSex{/* margin-left: -50.5%; */}
+.workPlaceLabel{/* margin-left: -50.5%; */}
+.registerMyBelief input[type="radio"]{margin-left: 14px;margin-top: 13px;/* z-index: 100px; */position: relative;}
+.workPlace select{width: 160px;float: left;}
+.workPlace{margin-left: -81px;}
+.workPlace >select:first-child{margin-left: 15px;}
+/*.personalDetail input[type="radio"]{position: relative;}*/
+.personalDetail input[type="radio"]{margin-left: 14px;margin-top: 13px;/* z-index: 100px; */position: relative;}
+#man{/* margin-left: -31.5%; */}
+.bibleText{position: relative;/* right: 50.5%; */}
+/* .opacityL1{background:pink; opacity:0.7; width:800px; height:302px;} */
+/* index的布局 */
+.index-navbar{padding: 21px 0px 0px 23px;background-color: #41DE23;min-width: 1990px;z-index: 300;}
+.index-navbar a:hover{text-decoration: none;}
+.index-navbar-img{float: right;margin-top: -16px;margin-right: 12%;width: 250px;margin-bottom: -15px;}
+.index-navbar-img img{width: 50px;height: 50px;border-radius: 30px;}
+.indexHeadImg{display: inline-block;float:left;}
+.index-container{width: 100%;margin-left: 19%;}
+.index-container .col-sm-3{box-shadow: 2px 2px 5px #888888;}
+.according-div{/* width: 285px; 左侧手风琴*/position: fixed;top: 76px;width: 305px;}
+.index-col-sm-3{padding-left: 0px;padding-right: 0px;float: left;width: 305px;min-height: 700px;}
+.index-col-sm-9{border: 1px solid #eee;float: left;width: 865px;}
+.index-area{width: 833px;float: left;margin: 5px 0px 15px 0px;height: 121px !important;/* resize:none; */}
+.index-textarea{float: left;box-shadow: 3px 3px 7px rgb(200, 172, 172);padding: 5px;background-color: #e6e7c0;}
+.index-area-title{margin-top: 11px;}
+.index-send-btn{float: right;/* margin-top: -33px; */margin-right: 9px;}
+.index-sharetitle{background-color: #A3C58E;float: left;clear: both;margin-top: 20px;}
+.index-sharecontent{float: left;clear: both;margin-bottom: 15px;}
+.index-sharecontent> ul >li{margin-top: 22px;float: left;clear: both;}
+.index-sharecontent >img{float: left;}
+.li-name{margin-bottom: 10px;font-size: 18px;color: #a5b9a5;}
+.name-time{float: left;padding: 17px 12px; color: #a5b9a5;}
+.index-row{margin-top: 76px; min-height: 728px;}
+.index-shareContentUl{margin-top: 13px; }
+.index-shareContentLi{border: 1px solid #eee;width: 833px;float: left;padding-bottom: 17px;}
+.shareContentPart{width: 716px;float: left;margin: 30px 61px;background-color: #f7f7f7;}
+.index-shareContentLi> a> img{width: 100px;height: 78px;float: left;width: 80px;height: 80px;}
+.index-top-title img{width: 500px;height: 50px;margin-top: -5%;margin-bottom: -2%;margin-left: -23%;}
+.content{/* white-space:normal;word-wrap: break-word; */word-break: break-all;color: rgb(130, 155, 96);font-size: 15px;font-weight: bold;}
+.contentImg >img{max-width:400px;max-height:300px;}
+.functionPart{width: 800px;float: left;/* border: 1px solid #eee; */padding-left: 60px;margin-top: -13px;}
+.functionPart ul li{float: left;margin: 5px 12px;}
+.functionPart ul li span{margin-right: 5px;}
+.sendContent{margin-top: 10px;float: left;}
+.sendArea{width: 718px;float: left;margin-left: 59px;resize: none;}
+.sendCommentArea{margin-left: 63px;}
+.sendContentBtn{float: right;margin: 10px 54px;width: 712px;}
+.sendContentBtn >button{width: 100px;}
+.sendContentBtn>a>i{float: left;}
+.sendAndReply button{width:100px;}
+.sendCommentBtn{float: right;margin-right: -5px;}
+.index-top-name{float: left;margin-top: 5px;/*margin-top: -21%;*/}
+.index-top-btn{background-color: #6FE63D;border: transparent;margin: 6px;height: 32px;border-radius: 5px;}
+.index-top-btn:hover{background-color: #DDF6D3;}
+.index-zan{float: left;height: 50px;width: 780px;}
+.index-zan >ol>li{float: left;margin-left: 5px;}
+.index-comment>img,.index-reply>img{width: 30px;height: 30px;}
+.index-comment span{color: #98989f ;}
+.blogTrash{float: right;margin-right: 20px;margin-top: 20px;}
+#previewArea>img{max-width:400px;max-height:300px;}
+/* .index-comment{float: left;} */
+.index-zan >ol>li img{width:30px;height:30px;}
+.index-comment{float: left;width: 720px;margin-left: 55px;}
+.commContent,
+.commDate{/* float: left; */}
+.commDate{width: 700px;}
+.index-comment{margin-top: 10px;}
+.index-comment >ol>li {float:left;}
+.index-comment >ol>li img{float: left;margin-right: 7px;width: 30px;height: 30px;}
+.functionPart span{float:left;}
+.functionPart i{float:left; margin-top: 4px; margin-right: 5px;}
+.upVote{}
+.commContent>span{color: #98989f;}
+.replyContentAll span{color: #98989f;}
+.commContentAll{width: 700px;width: 600px;float: left;}
+.replyContentAll{width: 700px;width: 600px;float: left;}
+.replyContent>span{color: blue;}
+.replyDate{width: 700px;}
+.index-reply{float: left;width: 700px;margin-left: 0;margin-top: 10px;}
+.index-reply >ol>li img{float: none;margin-right: 7px;width: 30px;height: 30px;}
+.sendAndReply{margin-left: 50px;float: left;}
+.sendAreaReply{width: 625px;}
+.sendReply-btn{float: right;margin-top: 2px;}
+.btn-foa{float: left;margin-left: 44%;/* margin-top: -10px; */}
+/* .open:visited{background-color:#fff;} */
+/* person-home样式style--start */
+.index-navbar-ul{float: left;}
+.index-navbar-ul>ul li{float: left;margin-left: 49px;}
+.index-navbar-ul>ul li i{margin-right: 5px;}
+/* .index-navbar>a >h4{float: left;clear: both;display: block;} */
+.index-top-title{float: left;margin-bottom: 14px;margin-left: 18%;/* margin-left: 339px; */}
+.myCount{margin-left: -4px;}
+.myCountUl >li{border: 1px solid;background-color: #D9D9D9;margin-left: 5px;padding: 10px 10px;width: 78px;float: left;height: 83px;text-align:center;}
+/* .person-cm3{width: 400px;height:100px;} */
+.myCountUl >li >a>span{}
+.photoNumber{font-size: 24px;}
+.person-userdetailUl{float: left;margin: 13px 0px;width: 249px;background-color: #f7f7f7;}
+.person-userdetailUl >ul >li{margin: 18px 5px;}
+.person-userdetailUl span{font-size: 21px;margin: 0px 7px;}
+.person-userdetailUl >ul>li>a>img{width: 71px;height: 71px;float: left;margin: 4px;}
+.person-label{margin: 4px 9px;float: left;clear: both;}
+.person-home-cm9{} .person-cm3{padding: 0px;}
+.person-c-headImage{/* text-align: center; */float: left;}
+.person-c-headImage >img{margin: 32px auto;width: 120px;height: 120px;float: left;}
+.person-c-headImage>span{/* display: block; */margin: 83px 44px;font-size: 28px;float: left;}
+.person-c-ul{text-align: center;margin-left: 92px;margin-top: 53px;}
+.person-c-ul >ul>li{margin-top: 10px;float: left;clear: both;}
+.person-c-ul >ul>li i{margin-right: 5px;}
+.top{width: 1710px;}
+.common-row{margin-top: 59px;}
+.prayFuncRow{background-color: #f3f3f3;}
+/* background:url('/lib/img/images/log-bg.jpg') */
+.logRowHeight{min-height:700px; repeat center center; }
+.img-span{position: relative;color: #fff;width: 78px;/* height: 77px; */}
+.img-span>span{font-size: 10px;position: absolute;margin-top: 55px;margin-left: -90%;padding: 3px 0px;width: 68px;background: linear-gradient(transparent, black);/* 标准的语法（必须放在最后） */}
+/* firends页面样式 */
+.talkTheme{float: left;margin: 11px;}
+.talkabout{float: right;}
+.friend-tab{float: left;margin: 20px 3px;width: 830px;}
+.hotTalkContent{float: left;margin: 13px;width: 620px;}
+/* 父子选择器中尽量不要设置span的样式，影响其它不在该父亲下的元素。 */
+.hotTalkContent>p{margin-top: 10px;}
+.hotTalk img{width: 90px;height: 90px;float: left;margin: 16px auto;border-radius: 50px;}
+.hotTalk ul li{float: left;}
+.find{width: 828px;height: 600px;background-color: #f7f7f7;text-align: center;padding-top: 70px;}
+.find h3{margin-bottom: 30px;}
+.warn{margin-top:}
+.sex{margin: 119px 300px;float: left;}
+.sex> ul>li{float: left;margin-left: 66px;}
+.sex> ul{margin-left: -40px;}
+.sex .sex-img >img{width: 90px;height: 90px;border-radius: 50px;margin-right: 20px;}
+.sex-img{width: 400px;margin-top: -22px;margin-left: -80px;}
+.sex-button{width: 200px;margin-top: -30px;width: 141px;}
+.search{width: 800px;height: 800px;position: relative;margin-left: 12%;}
+.ripple{-webkit-border-radius: 700px;-moz-border-radius: 700px;border-radius: 700px;margin-left: 38%;margin-top: 43%;}
+.search-ripple1{background: #fff;position: absolute;-webkit-animation: ripple 5s linear infinite;-moz-animation: ripple 5s linear infinite;-ms-animation: ripple 5s linear infinite;-o-animation: ripple 5s linear infinite;}
+.search-ripple2{background: #fff;position: absolute;-webkit-animation: ripple 5s linear infinite 1.2s;-moz-animation: ripple 5s linear infinite 1.2s;-ms-animation: ripple 5s linear infinite 1.2s;-o-animation: ripple 5s linear infinite 1.2s;}
+.search-ripple3{background: #fff;position: absolute;-webkit-animation: ripple 5s linear infinite 2.4s;-moz-animation: ripple 5s linear infinite 2.4s;-ms-animation: ripple 5s linear infinite 2.4s;-o-animation: ripple 5s linear infinite 2.4s;}
+.search-ripple4{background: #fff;position: absolute;-webkit-animation: ripple 5s linear infinite 3.6s;-moz-animation: ripple 5s linear infinite 3.6s;-ms-animation: ripple 5s linear infinite 3.6s;-o-animation: ripple 5s linear infinite 3.6s;}
+@-webkit-keyframes ripple{from{width: 255px;height: 255px;background: #e1e1e1;-webkit-transform: scale(0);opacity: 1;}to{width: 255px;height: 255px;background: #e1e1e1;-webkit-transform: scale(3);opacity: 0;}}
+@-moz-keyframes ripple{from{width: 255px;height: 255px;background: #e1e1e1;-moz-transform: scale(0);opacity: 1;}to{width: 255px;height: 255px;background: #e1e1e1;-moz-transform: scale(3);opacity: 0;}}
+@-o-keyframes ripple{from{width: 255px;height: 255px;background: #e1e1e1;-o-transform: scale(0);opacity: 1;}to{width: 255px;height: 255px;background: #e1e1e1;-o-transform: scale(3);opacity: 0;}}
+@keyframes ripple{from{width: 255px;height: 255px;background: #E1E1E1;transform: scale(0);opacity: 1;}to{width: 255px;height: 255px;background: #e1e1e1;transform: scale(3);opacity: 0;}}
+.stranger{width: 66%;/* height: 100%; */position: absolute;z-index: 0;margin-top: -700px;margin-left:9%;}
+.person{/* width: 142px;height: 100px; */float: left;width: 104px;}
+.strangerImg{/* float: left;clear: both;margin: 150px 260px; *//* width:108px; */}
+.strangerImg img{border-radius: 30px;width: 50px;height: 50px;float: left;margin-left: 27px;margin-bottom: 10px;}
+.strangerImg span,
+.strangerImg h5{float: left;clear: both;}
+.strangerImg h5{margin-left: 5px;margin-left: 30px;}
+.strangerMenu>ul>li{float: left;margin-left: 45px;}
+.strangerMenu>ul>li button{border-color: transparent;}
+.stranger-button{width: 170px;float: left;clear: both;margin: -100px 400px;}
+.stranger-button >button{float: left;clear: both;}
+.stranger-message{float: left;clear: both;margin-left: -34px;margin-top: 10px;}
+.nextStep{} .nav-tabs >li button{border-color: transparent;margin-top: 4px;}
+.dropdown-menu >li{float: left;width: 200px;}
+.dropdown-menu >li img{border-radius: 30px;width: 30px;height: 30px;float: left;}
+.dropdown-menu >li h5{/* float: right; */margin-left: 10px;margin-top: 10px;}
+.onLineFiend>.active>a,
+.onLineFiend>.active>a:focus,
+.onLineFiend>.active>a:hover{background-color: #41DE23}
+.onLineFiend >li a:hover{background-color: #41DE23}
+.friend-tab>ul >li{margin-right: 76px;color: red;}
+.friendOnLine{margin-left: 506px;}
+/* 好友谈话框*/
+.chat{width: 355px;height: 480px;background-color: #f7f7f7;position: fixed;bottom: 46px;right: 3px;}
+.chatHead{width: 350px;height: 42px;background-color: green;color: #fff;}
+.chatHead img{width: 40px;height: 40px;border-radius: 30px;}
+.chatHead i{float: right;margin: 15px 15px;}
+.chatBody-left{width: 120px;height: 450px;float: left;}
+.chatBody-right{width: 230px;height: 430px;border: 1px solid;float: left;}
+.chatContent{width: 225px;height: 358px;background-color: #fff;}
+.sendMessage{text-align: center;}
+.sendMessage textarea{width: 222px;height: 67px;}
+.left-friend .caret{/*float: left;margin-top: 8px;*/}
+.left-friend >li{} .left-friend >li button{padding: 0px;border-color: transparent;}
+.chatContent>ul li.myMessage{float: right;}
+.chatContent>ul li.otherMessage{float: left;}
+.chatContent>ul li h5{background-color: green;color: #fff;padding: 5px;}
+#face{position: fixed;bottom: 60px;right: 64px;z-index: 5;margin-right: 5px;}
+#send{position: fixed;bottom: 60px;right: 9px;z-index: 5;margin-right: 5px;width: 50px;}
+.chatFoot{width: 356px;height: 39px;position: fixed;bottom: 6px;right: 3px;background-color: pink;}
+.chatFoot>ul>li{float: left;margin-left: 35px;margin-top: 9px;}
+.switch{float: left;}
+/*person-set页面布局*/
+.personSetWelcome *{float: right;}
+#personSet-nickName{color: blue;}
+.personSetArea{height: 50px;}
+.personSetArea select{float: left;width: 176px;}
+.PSAreaWidth{width: auto;height: 65px;}
+/* .personSetWelcome >span{float: right;}
+.personSet-nickName{float: right;} */
+.z-setting-top >ul >li{margin-right:50px;}
+.z-set-body{
+	height: 800px;
+	margin-top: 55px;
+	text-align: center;
+	background-color: #f7f7f7;
+	background:url('/lib/img/images/zTree.jpg')no-repeat center center; 
+	}
+.personSetSex{width:176px;}
+.personSetNickName{width:350px;}
+.z-set-body > .tab-content{padding-top: 100px;}
+.tab-pane2-personSet{margin-left:80px;margin-top: 20px;}
+.z-upload{float: left;}
+#nickName{display: inline;}
+.z-imgPreview{float: left;margin: 50px;}
+.saveBtn{float: left;clear: both;margin: 56px 150px;}
+.l-cfor >label{margin-top: 12px;}
+/*用户个人信息详情*/
+.basicDetailForm .form-control{width: 300px;}
+.basicDetailForm label{float: left;clear: both;margin-right: 20px;width: 43px;}
+.nowLivePlace{width: 1000px;}
+.nowLivePlace >select{float: left;margin-bottom: 15px;}
+.nowLivePlace .form-control{width: 151px;}
+.basicDetailForm>ol{margin: 77px auto;}
+.userDetailBtn{margin-left: 105px;}
+/* 主内福音视频页面布局 */
+.websiteUrl{
+	width: 194px;
+	height: 100px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 6px;
+	padding: 31px 20px;
+	float: left;
+	margin: 20px;
+	background:url('/lib/img/images/shizijia1.png')repeat center center; 
+	/* background-color: rgba(165, 149, 149, 0.53); */
+	box-shadow: 3px 3px 5px #63AC61
+	}
+.websiteUrl a:hover{box-shadow: 3px 3px 5px #63AC61}
+/*找团契页面布局*/
+.FindFellowForm ul label{margin-left: -15%;}
+.findFellowModal{width: 760px;}
+.FindFellowForm{margin-top: 15px;}
+/* myWitness页面布局*/
+.myWintnessFunc>ul{margin-top: 21px;}
+.myWintnessFunc>ul>li{float: left;margin-right: 14px;}
+.myWintnessFunc>ul>li:last-child{padding-top: 12px;}
+.myWintnessFunc{margin-bottom: 5%;float: left;margin-top: -3%;}
+.WitnessContent{/*float: left;*/margin-top: 42px;}
+/* 个人中心好友列表布局 */
+.myFriAndFellow{/* height:700px; */box-shadow: -2px 0px 26px #888888 !important;position: fixed;top: 76px;width: 257px;right:1px;padding-left: 0;padding-right: 0;background-color: #eef8ef;}
+.myFriendTab{/* width: 122px; */    width: 111px;}
+.myFellowTab{/* width: 131px; */width: 142px;}
+.myFriendsList> ul>li{min-height: 70px;padding: 10px 13px;border-bottom: 1px solid #bce1d0;} 
+.myFriendsList{height:700px;overflow-y:auto;}
+.myFriendsList> ul>li img{width:50px;height:50px;border-radius: 12px;margin-right: 7px;}
+.myFriendsNo{height:40px;width:100%;padding-top:10px;background-color: #eae4e4;}
+.myFriendsLi i{float: right;margin-top: 16px;}
+/* 我的团契列表布局 */
+.myFellowsList> ul>li{min-height: 70px;padding: 10px 13px;border-bottom: 1px solid #bce1d0;} 
+.myFellowsList{height:700px;overflow-y:auto;}
+.myFellowsList> ul>li img{width:50px;height:50px;border-radius: 12px;margin-right: 7px;}
+.myFellowsNo{height:40px;width:100%;padding-top:10px;background-color: #eae4e4;}
+/*我的关注页面*/
+.concernTab>li>a{/* width: 100px; */height: 36px;}
+.myConcernListUL{width: 875px;/* border: 1px solid; */}
+.myConcernListUL>li{background-color: #f7f7f7;height: 100px;margin-bottom: 10px;}
+.myConcernList img{width:50px;height:50px;float:left;margin-right:10px;}
+.myConcernList{padding-top: 10px;padding-left: 10px;}
+.ConcernCnt >ul>li{float: left;margin-right: 6px;}
+.ConcernCnt{float: left;}
+.ConcernCnt >h4{color:blue;margin-right: 6px;}
+.concernPs{display:block;clear:both;}
+.concernTrash{float: right;margin-top: 10px;margin-right: 13px;}
+/*我的日志页面布局*/
+.myLogTable input{float:left;margin-right:10px;}
+.logBtn{float:right;}
+#logTabWitness,#logTabQT{box-shadow: 6px 5px 3px #D7DDDA;}
+/*我的团契页面布局*/
+.fellowShipImg{height: 93px;margin-top: 80px;}
+.fellowShipImg img{display: inline-block;margin-right: 10px;}
+.fellowShipImg span{font-size: 22px;}
+.fellowDetailRow{margin-top: 44px;min-height:700px;}
+.addFellowShipDiv{float:right;height:50px;}
+.fellowMemberUl >li{margin: 5px 5px !important;float: left;width: 70px;height: 70px;}
+.FSHeadImgPreview img{width:300px;height:200px;}
+/*日志详情页面布局*/
+.logDetailBg{background:url('/lib/img/images/myLogDetailBgImg.png')repeat center center;margin-top: 63px;}
+.logDetailAll{margin: 0 auto;width: 380px;margin-top: 92px;}
+.logTitle{/* text-align: center; */color: #9c8997;font-size: 14px;width: 358px;}
+.logDetailAll h4{text-align: right;}
+.editLog{float: right;margin-right: 87px;margin-top: 100px;}
+/*祷告墙页面布局*/
+.prayFunc{margin-top:60px;}
+.prayFunc ul li{float: left;margin-right: 137px;}
+.lookPrayDisplay >img {margin-top:-7px;}
+.prayPreview{box-shadow: 0px 5px 9px rgb(136, 136, 136);height: 400px;padding: 0;}
+.prayFormDiv{border: 1px solid #d1c0c0;height: 400px;padding: 0;text-align: center;}
+.prayPreTop{width: 200px;height: 36px;border-bottom: 1px dotted #ddd;margin: 0 auto;margin-top:27px;margin-bottom: 10px;}
+.prayPreTop a{width:11px;height:11px;float: right;}
+.prayPreTitle{width:291px;height: 40px;border: 2px solid #ddd;background-color: #eee;}
+.prayPreTop img{float:right;}
+.prayPreTop >h5{clear:both;}
+ .prayPreContentAll{margin: 0px auto; width: 200px;}
+ .prayPreContent{height: 121px;margin-top: 5px;}
+ .preContentImg{width:211px}
+ .praySubmit{float:left;}
+ .prayForm span{float:right;}
+ .prayDisplay{background:url('/lib/img/images/prayWall410.png')repeat center center;/* height: 700px; */}
+ .prayDisplay >ul{margin-left:105px;}
+  .prayDisplay>ul>li{opacity: 0.5;background-color: #fff;width: 222px;float: left;margin-right: 15px;margin-top: 10px;}
+  .prayList{background:url('/lib/img/images/.jpg')repeat center center;padding: 0;}
+  #prayContent{height:168px;}
+  .SearchPrayByName{margin-top: -26%;margin-left: 76%;}
+  .prayerName{height:36px;}
+ /* 头像弹窗布局*/
+ .cardDiv{position:absolute;background-color:#FFF; width:300px; height:160px; border:1px solid #ddd;background: url(/lib/img/images/showDiv.png) no-repeat right 0px #FFF;}
+.cardImg{float:left;}
+.cardImg img{margin: 10px 10px 0px 10px; width: 90px;}
+.cardMessage{float:left; width: 170px;}
+.cardMessage h5{color: #1d6297; font-weight: 700; margin-top: 15px;}
+.cardMessage p{font-size:12px; color:#333; margin-bottom: 6px; white-space: normal;}
+.cardMessage span{margin-right: 8px;}
+.cardBottom{float: left; width: 298px; height: 40px; border-top: 1px solid #eee; margin-top: 13px;}
+.cardBottom button{float: right; margin-top: 5px; background: transparent; font-size: 12px; margin-right: 6px;}
+.cardBottom button i{font-size: 11px;}
+/*相册页面布局*/
+.fellowShipPictures{box-shadow: 4px 0px 12px rgb(136, 136, 136);padding: 10px;}
+.fellowShipPictures img{width:200px;height:200px;}
+.fellowShipPictures  >h4{color: rgb(180, 186, 192); display: inline-block;width: 191px;font-weight: bold;font-size:16px;}
+ .fellowShipAlbum >ul{margin-left:105px;}
+  .fellowShipAlbum>ul>li{/* opacity: 0.5; */background-color: #fff;width: 222px;float: left;margin-right: 15px;margin-top: 10px;}
+  .uploadAlbumBtn{float:right;margin-top:20px;}
+  /*搜索页面的布局*/
+  .searchUsers,.searchFellowShips,.searchChurchs{width: 76%;float: left;margin-bottom: 20px;padding: 12px;box-shadow: 2px 2px 5px #888888;}
+  .stranger h4{color: #17bf9b;margin-bottom: 5px;}
+  .strangerImg span{margin-left: 17px;}
+/*团契问题答疑布局*/
+.requestUserDetail img{width:120px;height:120px;margin-left: 25%;margin-top: 10px;}
+.requestUserDetail{width: 224px;float:left;}
+.fSQDetail{float:left;}
+.questionTitle{float:left; }
+.questionTitle ul li {float:left;margin-right: 10px;}
+.answerTitle{float:left; }
+.answerTitle ul li {float:left;margin-right: 10px;padding: 5px;color: #b19696;}
+.answerUserDetail img{width:120px;height:120px;margin-left: 25%;margin-top: 10px;margin-bottom: 5px;}
+.answerUserDetail span,.requestUserDetail span{ display: block;float:left;margin-left: 62px;color: #b05e95;}
+.answerUserDetail{width: 224px;float:left;}
+.quesitionContent{width: 957px;min-height: 205px;border: 1px,solid;border: 1px solid;clear: both;color: rgb(212, 114, 210);}
+.answerContent{width: 958px;min-height: 170px;border: 1px,solid;border: 1px solid;clear: both;padding-left: 20px;padding-bottom: 10px;padding-top: 10px;}
+.fSQContent{width: 1200px;float: left;padding-bottom: 20px;border: 1px solid #f7f7f7;}
+.fSQContentR{box-shadow: 2px 2px 5px #888888;margin-top: 10px;margin-bottom: -9px;background-color: rgba(179, 227, 110, 0.39);}
+.fSQAnswerAll{margin-top: 20px;}
+.fSQAnswerAll >ul> li{margin-bottom: 9px;float: left;background-color: rgba(193, 210, 200, 0.77);}
+.fSReplyContent{min-height:200px;display: inline-block;}
+.answerTitleUl{width: 952px;float: left;}
+.answerTitleUl i{float:right;margin-right: 11px;margin-top:6px;}
+.fSAnswerBtn{float: right;margin-top: 19px;margin-right: -43px;}
+.fSReplyReplyContent{color: rgb(212, 114, 210);}
+/* 教会模块布局*/
+.churchArea select{float:left;width: 180px;}
+.searchFunc{width: 918px;height: 42px;}
+.showChurchBtn{float: right;}
+/* {background:url('/lib/img/images/prayWallDisplayBg.jpg')repeat center center; */
+/*主内网站分享部分布局*/
+.InChristShareBtn{float: right;margin-right: 90px;}
+/* .InChristWebForm >label{float: left;margin-right: 10px;} */
+.InChristModel{width:508px;}
+.InChristWebForm select{width: 359px;}
+
+.fsQBtn{float: right;margin-top: -30px;margin-bottom: 10px;margin-right: -8px;}
+/*个人设置认证部分布局*/
+.z-progress{width: 961px;display: none;margin-left: 47px;}
+.z-progress-alert{height: 50px;;margin-top: -20px;padding-top: 25px;}
+.auth_imgViewLabel{float:left;margin-left: 106px;margin-right: -20px;}
+#keep1{float: left;/* margin-top: 50px; */margin-left: 26%;}
+.authImgView{margin-left: 100px;}
+.z-sr-only{position: relative;}
+/*样式后期修改*/
+.addFriendModalHead{background: rgba(37, 225, 112, 0.7) none repeat scroll 0% 0%;}
+.fSBtn{float:right;margin-top: -10px;margin-left: 5px;}
+.addFSModalDiv{height:18px;}
+.addFSPSContent{float: right;color: rgb(134, 164, 164);font-weight: bold;font-size: 16px;}
+
+#previewArea{clear:both;float: left;margin-top: 30px;}
